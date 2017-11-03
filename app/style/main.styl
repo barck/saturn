@@ -1,0 +1,33 @@
+*
+	box-sizing inherit
+
+html
+
+	box-sizing border-box
+	background #fff 
+	font 16px PT Sans, sans-serif
+
+body
+	overflow-x: hidden;
+.container
+	width 960px
+	padding 0 10px
+	margin 0 auto
+	@media (max-width 765px)
+		width: auto
+
+.start-block
+	min-height 820px
+	background url("../img/hero_image_1.jpg") no-repeat center center
+	background-size cover
+
+.block-2
+	min-height 735px
+	background url("../img/hero_image_2.jpg") no-repeat center center
+	background-size cover
+	@media (max-width 765px)
+		display: none
+
+.main-footer
+	min-height 88px
+	background #151515

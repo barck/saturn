@@ -1,2 +1,2 @@
-# saturn
-saturn layout
+1 установить все зависимости командой npn или yarn
+2 для запуска веб сервера команда yarn/npn run gulp
