@@ -1,42 +1,228 @@
+.slider {
+	width: 50%;
+	margin: 100px auto;
+}
+
+.slick-slide {
+	margin: 0px 20px;
+}
+
+.slick-slide img {
+	width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+	color: black;
+}
+
+
+.slick-slide {
+	transition: all ease-in-out .3s;
+	opacity: 1;
+}
+
+.slick-active {
+	opacity: 1;
+}
+
+.slick-current {
+	opacity: 1;
+}
 *
-	box-sizing inherit
+	min-width: 0;
+	min-height: 0;
+	box-sizing: border-box;
 
 html
-
 	box-sizing border-box
 	background #fff 
-	font 16px PT Sans, sans-serif
+	font 16px Roboto, sans-serif
+	font-weight: 300
+	color #fff
 
 body
 	overflow-x: hidden;
+img
+	width: 100%
 
 .container
 	width 960px
 	padding 0 10px
 	margin 0 auto
+	//outline 1px solid red
 	@media (max-width 765px)
 		width: auto
 header
-	background: #f9c438
-	min-height: 80px
+	margin-bottom:150px
 
 .head-flex
 	display flex
 	justify-content space-between
+	padding: 0 40px
+	@media (max-width 1032px )
+		justify-content: center
+	@media (max-width 1182px)
+		justify-content: center
+	@media (min-width 1500px)
+		padding: 0 160px
+	@media (min-width 1900px)
+		padding: 0 350px
 
 .start-block
 	min-height 820px
-	background red url("../img/1.jpg") no-repeat center center
+	background url("../img/6.jpg") no-repeat center center
 	background-size cover
+	color #fff
+	padding-top: 20px
+	text-align: center
+	padding-bottom: 1px
 
 .block-2
-	min-height 735px
-	background blue url("../img/2.jpg") no-repeat center center
+	min-height 550px
+	background blue url("../img/5.jpg") no-repeat center center
 	background-size cover
-	@media (max-width 765px)
-		display: none
+	padding-bottom: 1px
+	padding-top: 50px
+
+.block-3
+	min-height 550px
+	background blue url("../img/3.jpg") no-repeat center center
+	background-size cover
+	padding-bottom: 1px
+	padding-top: 50px
 
 .main-footer
 	min-height 88px
 	background #151515
-	bg
+
+//ELEMENTS
+.logo
+	width: 150px
+	background: #f9c438
+	transform: skew(35deg, 0deg);
+	min-height 80px
+	border-radius 5px
+	padding-top: 10px
+	margin-right: 10px
+	&:hover
+		background #8b6500
+	@media (max-width 1247px)
+		display: none
+	img
+		width: 40%
+		transform: skew(-35deg, 0deg);
+
+.nav
+	display: inline-block
+	background #000
+	transform: skew(35deg, 0deg);
+	border-radius 5px
+	margin: 0
+	padding: 0
+	list-style none
+	text-align left
+	padding-left: 20px
+	font-size 14px
+	overflow: hidden
+	@media (max-width 1088px)
+		font-size 11px
+	li
+		transform: skew(-35deg, 0deg)
+		display: inline-block
+		border-bottom 2px solid transparent
+		&:last-child
+			position: relative
+			padding-left: 10px
+			vertical-align: top
+			a
+				padding-top: 10px
+				padding-bottom: 0
+			&:hover
+				border-color transparent
+			&:active
+				background: #000
+		&:hover
+			border-color #f9c438
+		&:active
+			background: #ccc
+	a.nav-items
+		text-decoration: none
+		color #fff
+		display: block
+		padding 20px 20px
+		padding-bottom 18px
+		transition 0.2s
+
+
+
+//HEADER END
+
+//START  BLOCK
+
+.start-block
+	h1
+		font-size 72px
+		line-height 110px
+		margin-bottom: 150px
+		font-weight: 300
+	h2
+		font-size 36px
+		line-height 42px
+		font-weight: 300
+
+.headline
+	font-size 54px
+	line-height 64px
+	text-align: center
+	color #f8c12c
+	font-weight: 300
+	margin-bottom: 40px
+	padding 0 140px
+
+//second block
+.btn
+	outline none
+	border none
+	background: linear-gradient(to bottom, #f9c438 0%, #f5bf39 26%, #f3bd37 29%, #eeb738 50%, #ecb534 55%, #e1a932 100%)
+	width: 100%
+	min-height 40px
+	line-height: 32px;
+	font-size: 24px;
+	text-decoration: none;
+	text-align: center;
+	color: #293234;
+	border-color: #fac53a;
+	border-radius: 5px;
+	&:hover
+		background: linear-gradient(to bottom, #ffd97a 0%, #fcd877 18%, #fed470 30%, #facb63 61%, #f8c75e 68%, #f5c153 100%)
+.areas
+	display flex
+	justify-content space-between
+	flex-wrap wrap
+	.areas-item
+		min-height 200px
+		width: 20%
+	img
+		width:100%
+		margin-bottom: 10px
+	p
+		margin: 0
+		margin-bottom: 10px
+		padding: 10px
+		text-align: center
+
+.areas-slider
+	display block
+	.areas-item
+		display: inline-block
+		min-height 200px
+		width: 20%
+	img
+		width: 180px
+	p
+		margin: 0
+		margin-bottom: 10px
+		padding: 10px
+		text-align: center
+
