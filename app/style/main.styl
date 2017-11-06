@@ -1,34 +1,3 @@
-.slider {
-	width: 50%;
-	margin: 100px auto;
-}
-
-.slick-slide {
-	margin: 0px 20px;
-}
-
-.slick-slide img {
-	width: 100%;
-}
-
-.slick-prev:before,
-.slick-next:before {
-	color: black;
-}
-
-
-.slick-slide {
-	transition: all ease-in-out .3s;
-	opacity: 1;
-}
-
-.slick-active {
-	opacity: 1;
-}
-
-.slick-current {
-	opacity: 1;
-}
 *
 	min-width: 0;
 	min-height: 0;
@@ -40,6 +9,8 @@ html
 	font 16px Roboto, sans-serif
 	font-weight: 300
 	color #fff
+	overflow-x: hidden;
+
 
 body
 	overflow-x: hidden;
@@ -54,7 +25,7 @@ img
 	@media (max-width 765px)
 		width: auto
 header
-	margin-bottom:150px
+	margin-bottom:100px
 
 .head-flex
 	display flex
@@ -70,31 +41,51 @@ header
 		padding: 0 350px
 
 .start-block
-	min-height 820px
-	background url("../img/6.jpg") no-repeat center center
+	background url("../img/6.jpg") repeat fixed
 	background-size cover
 	color #fff
 	padding-top: 20px
 	text-align: center
 	padding-bottom: 1px
-
 .block-2
-	min-height 550px
-	background blue url("../img/5.jpg") no-repeat center center
+	background blue url("../img/5.jpg") repeat fixed
 	background-size cover
 	padding-bottom: 1px
-	padding-top: 50px
-
+	padding-top: 20px
 .block-3
-	min-height 550px
-	background blue url("../img/3.jpg") no-repeat center center
+	background blue url("../img/3.jpg") repeat fixed
 	background-size cover
-	padding-bottom: 1px
-	padding-top: 50px
-
+	padding-bottom: 30px
+	padding-top: 20px
+.block-4
+	background blue url("../img/1.jpg") repeat fixed
+	background-size cover
+	padding-bottom: 30px
+	padding-top: 20px
+.block-5
+	background blue url("../img/8.jpg") repeat fixed
+	min-height 500px
+	background-size cover
+	padding-bottom: 30px
+	padding-top: 20px
+.block-6
+	background #fff
+	min-height 200px
+	padding-top: 20px
+	padding-bottom: 20px
+.block-7
+	background blue url("../img/9.jpg") repeat fixed
+	min-height 200px
+	padding-top: 20px
+	padding-bottom: 30px
 .main-footer
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
 	min-height 88px
 	background #151515
+	padding-bottom: 1px
+	align-items center
 
 //ELEMENTS
 .logo
@@ -170,6 +161,7 @@ header
 		font-size 36px
 		line-height 42px
 		font-weight: 300
+		margin-bottom: 70px
 
 .headline
 	font-size 54px
@@ -178,7 +170,7 @@ header
 	color #f8c12c
 	font-weight: 300
 	margin-bottom: 40px
-	padding 0 140px
+	padding 0 120px
 
 //second block
 .btn
@@ -200,19 +192,23 @@ header
 	display flex
 	justify-content space-between
 	flex-wrap wrap
+	margin-bottom: 70px
 	.areas-item
 		min-height 200px
 		width: 20%
 	img
 		width:100%
-		margin-bottom: 10px
+		margin-bottom: 40px
 	p
 		margin: 0
-		margin-bottom: 10px
+		margin-bottom: 40px
 		padding: 10px
 		text-align: center
+		font-size 18px
+		line-height 26px
 
 .areas-slider
+	margin-bottom: 50px
 	display block
 	.areas-item
 		display: inline-block
@@ -221,8 +217,96 @@ header
 	img
 		width: 180px
 	p
+		width: 180px
 		margin: 0
 		margin-bottom: 10px
 		padding: 10px
 		text-align: center
+.cta
+	p
+		padding: 0 70px
+		text-align: center
+		font-size: 18px
+		line-height: 28px
+		margin-bottom: 20px
+.btn-cta
+	width: 70%
+	margin: 0 15%
+	padding: 10px 0
 
+//block-4
+
+.advantages-flex
+	display: flex
+	justify-content: space-between
+	flex-wrap wrap
+.advantage-item
+	width: 50%
+	padding: 20px
+	h3
+		font-size 24px
+		line-height 36px
+		font-weight: 600
+		color #fff
+
+
+.block-6
+	.headline
+		color #000
+		font-size 42px
+		line-height 51px
+		margin-bottom: 30px
+
+.contacts-flex
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	.left
+		width: 50%
+	.right
+		width: 50%
+		padding-left: 100px
+		padding-top: 30px
+	p
+		margin-top: 0
+		padding-top: 0
+		margin-bottom: 40px
+		font-size 18px
+		line-height 24px
+		position: relative
+		&:before
+			position: absolute
+			content " "
+			background url("../img/home.png")
+			background-size: cover
+			width: 40px
+			height: 40px
+			top: -10px
+			left: -60px
+	.phone
+		&:before
+			background url("../img/phone.png")
+			background-size: cover
+			top: 3px
+			left: -60px
+	.geo
+		&:before
+			background url("../img/geo.png")
+			background-size: cover
+			top: 3px
+			left: -60px
+	.mail
+		&:before
+			background url("../img/mail.png")
+			background-size: cover
+	.forward
+		&:before
+			background url("../img/forward.png")
+			background-size: cover
+
+.main-footer
+	padding: 20px
+	line-height 28px
+	a
+		display: block
+		font-weight: 100

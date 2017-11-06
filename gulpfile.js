@@ -26,7 +26,9 @@ gulp.task('scripts', function() {
 // Get one .styl file and render
 gulp.task('stylus', function () {
     return gulp.src('app/style/*.styl')
-        .pipe(stylus())
+        .pipe(stylus({
+            compress: true
+        }))
         .pipe(concat('main.css'))
         .pipe(gulp.dest('public/style/'))
         .pipe(browserSync.reload({stream: true}));
