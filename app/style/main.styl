@@ -21,11 +21,17 @@ img
 	width 960px
 	padding 0 10px
 	margin 0 auto
-	//outline 1px solid red
+	@media (max-width 992px)
+		width: 750px
 	@media (max-width 765px)
 		width: auto
 header
-	margin-bottom:100px
+	//margin-bottom:100px
+	width: 100%
+	position: fixed
+	z-index 30
+	@media (max-width 992px)
+		position: relative
 
 .head-flex
 	display flex
@@ -33,12 +39,15 @@ header
 	padding: 0 40px
 	@media (max-width 1032px )
 		justify-content: center
-	@media (max-width 1182px)
-		justify-content: center
-	@media (min-width 1500px)
+	@media (min-width 1524px)
 		padding: 0 160px
 	@media (min-width 1900px)
 		padding: 0 350px
+	@media (max-width 992px)
+		padding: 0
+	nav
+		@media (max-width 992px)
+			width: 100%
 
 .start-block
 	background url("../img/6.jpg") repeat fixed
@@ -47,6 +56,12 @@ header
 	padding-top: 20px
 	text-align: center
 	padding-bottom: 1px
+	.container
+		margin-top: 180px
+	@media (max-width 992px)
+		padding-top: 0
+		background url("../img/6.jpg") no-repeat center center
+		background-size cover
 .block-2
 	background blue url("../img/5.jpg") repeat fixed
 	background-size cover
@@ -96,9 +111,10 @@ header
 	border-radius 5px
 	padding-top: 10px
 	margin-right: 10px
+	box-shadow: 0px 0px 20px 0px rgba(249,196,56,0.5);
 	&:hover
 		background #8b6500
-	@media (max-width 1247px)
+	@media (max-width 1285px)
 		display: none
 	img
 		width: 40%
@@ -116,16 +132,28 @@ header
 	padding-left: 20px
 	font-size 14px
 	overflow: hidden
-	@media (max-width 1088px)
+	box-shadow: 0px 0px 20px 0px rgba(255,255,255,0.5);
+	@media (max-width 1130px)
 		font-size 11px
+	@media (max-width 992px)
+		display: flex
+		justify-content: space-between
+		font-size 15px
+		transform none
+		border-radius 0
+		padding-left: 0
 	li
 		transform: skew(-35deg, 0deg)
 		display: inline-block
 		border-bottom 2px solid transparent
+		@media (max-width 992px)
+			transform none
 		&:last-child
 			position: relative
 			padding-left: 10px
 			vertical-align: top
+			@media (max-width 992px)
+				display: none
 			a
 				padding-top: 10px
 				padding-bottom: 0
@@ -144,6 +172,8 @@ header
 		padding 20px 20px
 		padding-bottom 18px
 		transition 0.2s
+		@media (max-width 992px)
+			padding: 25px 10px
 
 
 
@@ -156,21 +186,27 @@ header
 		font-size 72px
 		line-height 110px
 		margin-bottom: 150px
-		font-weight: 300
+		font-weight: 100
+		@media (max-width 992px)
+			font-size 56px
+			line-height 72px
 	h2
 		font-size 36px
 		line-height 42px
-		font-weight: 300
-		margin-bottom: 70px
+		font-weight: 100
+		margin-bottom: 150px
 
 .headline
 	font-size 54px
 	line-height 64px
 	text-align: center
 	color #f8c12c
-	font-weight: 300
+	font-weight: 100
 	margin-bottom: 40px
 	padding 0 120px
+	@media (max-width 992px)
+		font-size 38px
+		line-height 46px
 
 //second block
 .btn
@@ -186,6 +222,7 @@ header
 	color: #293234;
 	border-color: #fac53a;
 	border-radius: 5px;
+	box-shadow: 0px 0px 20px 0px rgba(249,196,56,0.5);
 	&:hover
 		background: linear-gradient(to bottom, #ffd97a 0%, #fcd877 18%, #fed470 30%, #facb63 61%, #f8c75e 68%, #f5c153 100%)
 .areas
@@ -206,6 +243,8 @@ header
 		text-align: center
 		font-size 18px
 		line-height 26px
+		@media (max-width 992px)
+			padding: 0
 
 .areas-slider
 	margin-bottom: 50px

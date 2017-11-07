@@ -14,8 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
 </head>
-<body>
-
+<body id="scroll">
 <section class="start-block">
     <header>
         <div class="head-flex">
@@ -23,9 +22,9 @@
             <nav>
                 <ul class="nav">
                     <li><a class="nav-items" href="#">Области применения</a></li>
-                    <li><a class="nav-items" href="#">Преемущества</a></li>
-                    <li><a class="nav-items" href="#">Частые вопросы</a></li>
-                    <li><a class="nav-items" href="#">Контакты</a></li>
+                    <li><a class="nav-items" href="#avantages">Преемущества</a></li>
+                    <li><a class="nav-items" href="#questions">Частые вопросы</a></li>
+                    <li><a class="nav-items" href="#contacts">Контакты</a></li>
                     <li><a class="nav-items" href="#">Изготовление деталей</a></li>
                     <li><a href="tel:+79823050216" class="nav-items">+7 (982) 305-02-16 <br>Бесплатная консультация</a></li>
                 </ul>
@@ -100,7 +99,7 @@
         </div>
     </div>
 </section>
-<section class="block-4">
+<section class="block-4" id="avantages">
     <div class="container">
         <h2 class="headline">Наши преимущества</h2>
         <div class="advantages-flex">
@@ -131,7 +130,7 @@
         </div>
     </div>
 </section>
-<section class="block-5 ac-container">
+<section class="block-5 ac-container" id="questions">
     <div class="container">
         <h2 class="headline">Ответы на частые вопросы</h2>
         <div>
@@ -196,7 +195,7 @@
             </div>
     </div>
 </section>
-<section class="block-7">
+<section class="block-7" id="contacts">
     <div class="container">
         <h2 class="headline">Контакты</h2>
         <div class="contacts-flex">
@@ -221,8 +220,8 @@
     </div>
     <div class="footer-centre">
         <a href="#">Технические характеристики полимера</a>
-        <a href="#">Часто задаваемые вопросы</a>
-        <a href="#">Преимущества</a>
+        <a href="#questions">Часто задаваемые вопросы</a>
+        <a href="#avantages">Преимущества</a>
         <a href="#">Защитные крема</a>
         <a href="#">Изготовление деталей на заказ</a>
     </div>

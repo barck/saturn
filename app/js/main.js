@@ -17,3 +17,27 @@ $('.partners-slider').slick({
     slidesToShow: 4,
     slidesToScroll: 1
 });
+
+
+$(document).ready(function(){
+    $("#scroll").on("click","a", "button", function (event) {
+        //отменяем стандартную обработку нажатия по ссылке
+        event.preventDefault();    //раскомментировать, если будет лагать скролл
+
+        //забираем идентификатор бока с атрибута href
+        var id  = $(this).attr('href'),
+
+            //узнаем высоту от начала страницы до блока на который ссылается якорь
+            top = $(id).offset().top - 90;
+
+        //анимируем переход на расстояние - top за 1500 мс
+        $('body,html').animate({scrollTop: top}, 1500);
+    });
+});
+
+
+// $( "#arrow" ).click(function() {
+//     $( "#arrow" ).fadeOut( 1500, function() {
+//         // Анимация завершена.
+//     });
+// });
