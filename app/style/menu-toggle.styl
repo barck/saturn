@@ -1,0 +1,102 @@
+* {
+    transition:.25s ease-in-out;
+    box-sizing:border-box;
+}
+
+span
+    display: block
+    background #fff
+    border-radius:2px;
+
+
+
+#menu-toggle
+    width:50px;
+    height:50px;
+    position:relative;
+    cursor:pointer;
+    background #f9c438
+    display: none
+    z-index 50
+    @media (max-width 765px)
+        display: block
+    &:hover
+        background #f9c438
+    #hamburger
+        position:absolute;
+        height:100%;
+        width:100%;
+        span
+            width:30px;
+            height:2px;
+            position:relative;
+            top:3px;
+            left:10px;
+            margin:10px 0;
+            &:nth-child(1)
+                transition-delay:.5s;
+
+            &:nth-child(2)
+                transition-delay:.625s;
+
+            &:nth-child(3)
+                transition-delay:.75s;
+
+
+
+    #cross {
+        position:absolute;
+        height:100%;
+        width:100%;
+        transform:rotate(45deg);
+        span{
+            &:nth-child(1){
+                height:0%;
+                width:2px;
+                position:absolute;
+                top:10%;
+                left:25px;
+                transition-delay:0s;
+            }
+            &:nth-child(2){
+                width:0%;
+                height:2px;
+                position:absolute;
+                left:10%;
+                top:25px;
+                transition-delay:.25s;
+            }
+        }
+    }
+
+
+#menu-toggle.open {
+    #hamburger {
+        span {
+            width:0%;
+            &:nth-child(1){
+                transition-delay:0s;
+            }
+            &:nth-child(2){
+                transition-delay:.125s;
+            }
+            &:nth-child(3){
+                transition-delay:.25s;
+            }
+        }
+    }
+    #cross {
+        span {
+            &:nth-child(1){
+                height:80%;
+                transition-delay:.625s;
+            }
+        }
+        span {
+            &:nth-child(2){
+                width:80%;
+                transition-delay:.375s;
+            }
+        }
+    }
+}

@@ -41,3 +41,10 @@ $(document).ready(function(){
 //         // Анимация завершена.
 //     });
 // });
+
+
+$('#menu-toggle').click(function(){
+    $(this).toggleClass('open');
+    $('.nav').toggleClass('toggle');
+})
+

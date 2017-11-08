@@ -32,11 +32,13 @@ header
 	z-index 30
 	@media (max-width 992px)
 		position: relative
-
+	@media (max-width 765px)
+		background: #000
 .head-flex
 	display flex
 	justify-content space-between
 	padding: 0 40px
+	position: relative
 	@media (max-width 1032px )
 		justify-content: center
 	@media (min-width 1524px)
@@ -142,12 +144,21 @@ header
 		transform none
 		border-radius 0
 		padding-left: 0
+	@media (max-width 765px)
+		display: none
+		box-shadow none
+		position: absolute
+		width: 100%
 	li
 		transform: skew(-35deg, 0deg)
 		display: inline-block
 		border-bottom 2px solid transparent
+		padding-bottom: 0
 		@media (max-width 992px)
 			transform none
+		@media (max-width 765px)
+			display: block
+			border-color #f9c438
 		&:last-child
 			position: relative
 			padding-left: 10px
@@ -163,8 +174,6 @@ header
 				background: #000
 		&:hover
 			border-color #f9c438
-		&:active
-			background: #ccc
 	a.nav-items
 		text-decoration: none
 		color #fff
@@ -174,8 +183,18 @@ header
 		transition 0.2s
 		@media (max-width 992px)
 			padding: 25px 10px
-
-
+		@media (max-width 992px)
+			padding: 15px 20px
+.mobile-logo
+	display: none
+	@media (max-width 765px)
+		display: block
+		position: absolute
+		color #fff
+		font-size 32px
+		line-height 42px
+.toggle
+	display: block
 
 //HEADER END
 
