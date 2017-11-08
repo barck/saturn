@@ -2,5 +2,5 @@ node_modules
 app/.DS_Store
 app/img/.DS_Store
 .DS_Store
-.idea/workspace.xml
+.idea
 *.xml
