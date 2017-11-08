@@ -15,6 +15,71 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
 </head>
 <body id="scroll">
+        <div class="smart-wrap" style="display: none;" id="hidden-content-a">
+            <div class="smart-forms smart-container wrap-3">
+
+                <div class="form-header header-primary">
+                    <h4><i class="fa fa-comments"></i>Contact us</h4>
+                </div><!-- end .form-header section -->
+
+                <form method="post" action="/" id="contact3">
+                    <div class="form-body">
+
+                        <div class="section">
+                            <label class="field prepend-icon">
+                                <input type="text" name="names" id="names" class="gui-input" placeholder="Enter name...">
+                                <span class="field-icon"><i class="fa fa-user"></i></span>
+                            </label>
+                        </div><!-- end section -->
+
+                        <div class="section">
+                            <label class="field prepend-icon">
+                                <input type="email" name="email" id="email" class="gui-input" placeholder="Enter Email...">
+                                <span class="field-icon"><i class="fa fa-envelope"></i></span>
+                            </label>
+                        </div><!-- end section -->
+
+                        <div class="section">
+                            <label class="field prepend-icon">
+                                <input type="text" name="subject" id="subject" class="gui-input" placeholder="Enter subject...">
+                                <span class="field-icon"><i class="fa fa-lightbulb-o"></i></span>
+                            </label>
+                        </div><!-- end section -->
+
+                        <div class="section">
+                            <label class="field prepend-icon">
+                                <textarea class="gui-textarea" id="comment" name="comment" placeholder="Enter message..."></textarea>
+                                <span class="field-icon"><i class="fa fa-comments"></i></span>
+                                <span class="input-hint"> <strong>Hint:</strong> Please enter between 80 - 300 characters.</span>
+                            </label>
+                        </div><!-- end section -->
+
+                        <div class="section">
+                            <div class="smart-widget sm-left sml-80">
+                                <label class="field prepend-icon">
+                                    <input type="text" name="verify" id="verify" class="gui-input" placeholder="Solve captcha">
+                                    <span class="field-icon"><i class="fa fa-shield"></i></span>
+                                </label>
+                                <label for="verify" class="button">4 + 12</label>
+                            </div><!-- end .smart-widget section -->
+                        </div><!-- end section -->
+
+                        <div class="section">
+                            <label class="option">
+                                <input type="checkbox" name="check1">
+                                <span class="checkbox"></span> Sign me up to the newsletter
+                            </label>
+                        </div><!-- end section -->
+
+                    </div><!-- end .form-body section -->
+                    <div class="form-footer">
+                        <button type="submit" class="button btn-primary">Submit</button>
+                    </div><!-- end .form-footer section -->
+                </form>
+
+            </div><!-- end .smart-forms section -->
+        </div><!-- end .smart-wrap section -->
+
 <section class="start-block">
     <header>
         <div class="head-flex">
@@ -33,12 +98,20 @@
                     </div>
                 </div>
                 <ul class="nav">
-                    <li><a class="nav-items" href="#">Области применения</a></li>
+                    <li>
+                        <a class="nav-items" href="#">Области применения</a>
+                        <ul>
+                            <li><a href="#">Горнодобывающая промышленность</a></li>
+                            <li><a href="#">Нефтедобывающая промышленность</a></li>
+                            <li><a href="#">Энергетическая промышленность</a></li>
+                            <li><a href="#">Автотранспорт и спецтехника</a></li>
+                        </ul>
+                    </li>
                     <li><a class="nav-items" href="#avantages">Преемущества</a></li>
                     <li><a class="nav-items" href="#questions">Частые вопросы</a></li>
                     <li><a class="nav-items" href="#contacts">Контакты</a></li>
                     <li><a class="nav-items" href="#">Изготовление деталей</a></li>
-                    <li><a href="tel:+79823050216" class="nav-items">+7 (982) 305-02-16 <br>Бесплатная консультация</a></li>
+                    <li><a data-fancybox data-src="#hidden-content-a" href="javascript:;"  class="nav-items">+7 (982) 305-02-16 <br>Бесплатная консультация</a></li>
                 </ul>
             </nav>
         </div>
@@ -117,27 +190,27 @@
         <div class="advantages-flex">
             <div class="advantage-item">
                 <h3>1. Материал собственной разработки</h3>
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aperiam aut dignissimos doloremque ipsa optio quasi quis veniam. Aperiam earum officia recusandae sed ut! Dicta excepturi labore placeat! Error, qui? </p>
+                <p>У всех композитных полимеров, представленных на рынке, есть общие недостатки, поэтому, нами было принято решение о собственной разработке. В результате работы НИИ и специалистов, имеющих глубокие знания в данной области, нам удалось превзойти по техническим характеристикам все существующие аналоги. [Отчёт о проведённых исследованиях]</p>
             </div>
             <div class="advantage-item">
-                <h3>1. Материал собственной разработки</h3>
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aperiam aut dignissimos doloremque ipsa optio quasi quis veniam. Aperiam earum officia recusandae sed ut! Dicta excepturi labore placeat! Error, qui? </p>
+                <h3>2. Индивидуальная модификация полимера</h3>
+                <p>Под каждый вид работ мы модифицируем полимер в зависимости от среды работы, температурного режим и т.д.</p>
             </div>
             <div class="advantage-item">
-                <h3>1. Материал собственной разработки</h3>
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aperiam aut dignissimos doloremque ipsa optio quasi quis veniam. Aperiam earum officia recusandae sed ut! Dicta excepturi labore placeat! Error, qui? </p>
+                <h3>3. Скорость и удобство ремонта</h3>
+                <p>Большинство работ проводятся в течение рабочей смены и без демонтажа оборудования</p>
             </div>
             <div class="advantage-item">
-                <h3>1. Материал собственной разработки</h3>
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aperiam aut dignissimos doloremque ipsa optio quasi quis veniam. Aperiam earum officia recusandae sed ut! Dicta excepturi labore placeat! Error, qui? </p>
+                <h3>4. Увеличение ресурса оборудования</h3>
+                <p>Наша технология устойчива к ударным и вибрационным нагрузкам (в отличие от большинства полимеров). Также, ремонт производится без термообработки, чтобы избежать изменения структуры металла (например, микротрещин на чугуне).</p>
             </div>
             <div class="advantage-item">
-                <h3>1. Материал собственной разработки</h3>
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aperiam aut dignissimos doloremque ipsa optio quasi quis veniam. Aperiam earum officia recusandae sed ut! Dicta excepturi labore placeat! Error, qui? </p>
+                <h3>5. Подходит для любых металлов</h3>
+                <p>Работы проводятся с любыми металлами и сплавами (чугун, сталь, цветные металлы, алюминиево-магниевые и т.д.)</p>
             </div>
             <div class="advantage-item">
-                <h3>1. Материал собственной разработки</h3>
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aperiam aut dignissimos doloremque ipsa optio quasi quis veniam. Aperiam earum officia recusandae sed ut! Dicta excepturi labore placeat! Error, qui? </p>
+                <h3>6. Гарантия на все виды работ</h3>
+                <p>Мы уверены в качестве наших материалов, поэтому даём гарантию на все виды ремонта 12 месяцев</p>
             </div>
         </div>
     </div>

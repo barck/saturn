@@ -24,7 +24,7 @@ img
 	@media (max-width 992px)
 		width: 750px
 	@media (max-width 765px)
-		width: auto
+		width: 100%
 header
 	//margin-bottom:100px
 	width: 100%
@@ -60,6 +60,8 @@ header
 	padding-bottom: 1px
 	.container
 		margin-top: 180px
+		@media (max-width 765px)
+			margin-top: 70px
 	@media (max-width 992px)
 		padding-top: 0
 		background url("../img/6.jpg") no-repeat center center
@@ -87,14 +89,15 @@ header
 	padding-top: 20px
 .block-6
 	background #fff
-	min-height 200px
 	padding-top: 20px
-	padding-bottom: 20px
+	padding-bottom: 40px
 .block-7
 	background blue url("../img/9.jpg") repeat fixed
 	min-height 200px
 	padding-top: 20px
 	padding-bottom: 30px
+	@media (max-width 765px)
+		padding-bottom: 0
 .main-footer
 	display: flex
 	flex-wrap: wrap
@@ -133,7 +136,6 @@ header
 	text-align left
 	padding-left: 20px
 	font-size 14px
-	overflow: hidden
 	box-shadow: 0px 0px 20px 0px rgba(255,255,255,0.5);
 	@media (max-width 1130px)
 		font-size 11px
@@ -163,17 +165,44 @@ header
 			position: relative
 			padding-left: 10px
 			vertical-align: top
-			@media (max-width 992px)
-				display: none
+
 			a
 				padding-top: 10px
 				padding-bottom: 0
 			&:hover
 				border-color transparent
-			&:active
-				background: #000
 		&:hover
 			border-color #f9c438
+		&:hover ul
+			@media(min-width 768px)
+				display: block
+		ul
+			display none
+			position: absolute
+			z-index 100
+			background: #000
+			border-radius: 5px
+			top: 50px
+			left: 0
+			padding 0
+			margin: 0
+			li
+				display: block
+				transform: skew(0deg, 0deg)
+				&:last-child
+					padding-left: 0
+					&:hover
+						border-color: #f9c438;
+					a
+						padding 10px 20px
+				a
+					text-decoration: none
+					color #fff
+					display: block
+					padding 10px 20px
+					padding-bottom 18px
+					transition 0.2s
+
 	a.nav-items
 		text-decoration: none
 		color #fff
@@ -183,8 +212,7 @@ header
 		transition 0.2s
 		@media (max-width 992px)
 			padding: 25px 10px
-		@media (max-width 992px)
-			padding: 15px 20px
+
 .mobile-logo
 	display: none
 	@media (max-width 765px)
@@ -209,11 +237,19 @@ header
 		@media (max-width 992px)
 			font-size 56px
 			line-height 72px
+		@media (max-width 765px)
+			margin-bottom: 80px
+			font-size 43px
+			line-height 61px
 	h2
 		font-size 36px
 		line-height 42px
 		font-weight: 100
 		margin-bottom: 150px
+		@media (max-width 765px)
+			margin-bottom: 70px
+			font-size 24px
+			line-height 36px
 
 .headline
 	font-size 54px
@@ -226,6 +262,11 @@ header
 	@media (max-width 992px)
 		font-size 38px
 		line-height 46px
+	@media (max-width 765px)
+		padding: 0
+		font-size 28px
+		line-height 36px
+		margin-bottom: 30px
 
 //second block
 .btn
@@ -249,9 +290,14 @@ header
 	justify-content space-between
 	flex-wrap wrap
 	margin-bottom: 70px
+	@media (max-width 765px)
+		margin-bottom: 0px
 	.areas-item
 		min-height 200px
 		width: 20%
+		@media (max-width 765px)
+			width: 48%
+			margin-bottom: 50px
 	img
 		width:100%
 		margin-bottom: 40px
@@ -275,7 +321,6 @@ header
 	img
 		width: 180px
 	p
-		width: 180px
 		margin: 0
 		margin-bottom: 10px
 		padding: 10px
@@ -287,6 +332,9 @@ header
 		font-size: 18px
 		line-height: 28px
 		margin-bottom: 20px
+		@media (max-width 765px)
+			padding: 0
+			text-align: left
 .btn-cta
 	width: 70%
 	margin: 0 15%
@@ -298,14 +346,29 @@ header
 	display: flex
 	justify-content: space-between
 	flex-wrap wrap
+	align-items baseline
 .advantage-item
-	width: 50%
-	padding: 20px
+	width: 46%
+	@media (max-width 765px)
+		width: 100%
 	h3
 		font-size 24px
 		line-height 36px
-		font-weight: 600
-		color #fff
+		font-weight: 400
+		color #f8c12c
+		margin-bottom: 10px
+		@media (max-width 765px)
+			font-size 18px
+			line-height: 22px
+	p
+		font-size: 18px;
+		line-height: 28px;
+		margin-bottom: 20px;
+		font-weight: 100;
+		@media (max-width 765px)
+			font-size 16px
+			line-height: 22px
+
 
 
 .block-6
@@ -314,6 +377,9 @@ header
 		font-size 42px
 		line-height 51px
 		margin-bottom: 30px
+		@media (max-width 765px)
+			font-size 28px
+			line-height 36px
 
 .contacts-flex
 	display: flex
@@ -321,10 +387,16 @@ header
 	justify-content: space-between
 	.left
 		width: 50%
+		@media (max-width 765px)
+			display: none
 	.right
 		width: 50%
 		padding-left: 100px
 		padding-top: 30px
+		@media (max-width 765px)
+			width: 100%
+			padding-top: 0
+			padding-left: 60px
 	p
 		margin-top: 0
 		padding-top: 0
@@ -368,3 +440,18 @@ header
 	a
 		display: block
 		font-weight: 100
+	.footer-left
+		width: 15%
+		@media (max-width 765px)
+			width: 100%
+	.footer-centre
+		width: 15%
+		@media (max-width 765px)
+			width: 100%
+	.footer-right
+		width: 15%
+		@media (max-width 765px)
+			width: 100%
+
+.fancybox-slide>div
+	background-color transparent!important

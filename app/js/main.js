@@ -1,22 +1,42 @@
-$('.areas-slider').slick({
-    infinite: true,
-    dots: true,
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    slidesToShow: 4,
-    slidesToScroll: 1
-});
-
-$('.partners-slider').slick({
-    infinite: true,
-    dots: false,
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    slidesToShow: 4,
-    slidesToScroll: 1
-});
+if(window.screen.width >= 765) {
+    $('.areas-slider').slick({
+        infinite: true,
+        dots: true,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        slidesToShow: 4,
+        slidesToScroll: 1
+    });
+    $('.partners-slider').slick({
+        infinite: true,
+        dots: false,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        slidesToShow: 4,
+        slidesToScroll: 1
+    });
+} else{
+    $('.areas-slider').slick({
+        infinite: true,
+        dots: true,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    });
+    $('.partners-slider').slick({
+        infinite: true,
+        dots: false,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        slidesToShow: 2,
+        slidesToScroll: 1
+    });
+}
 
 
 $(document).ready(function(){
@@ -47,4 +67,3 @@ $('#menu-toggle').click(function(){
     $(this).toggleClass('open');
     $('.nav').toggleClass('toggle');
 })
-
