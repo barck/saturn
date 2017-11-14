@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <title>Сатурн</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+</head>
+<body id="scroll">
+{% include 'partials/smart-form.twig' %}
+<section class="user-block">
+    {% include 'partials/header.twig' %}
+    <div class="container">
+        <h1>Примеры проведенных работ по ремонту горнодобывающего оборудования</h1>
+        <div class="breadcrumbs">
+            <ul>
+                <li><a href="#1">Главная</a></li>
+                <li><a href="#2">Продукция</a></li>
+                <li><a href="#3">Название страницы</a></li>
+            </ul>
+        </div>
+        <div class="user-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, laboriosam, voluptas. Accusamus adipisci aliquam, asperiores assumenda consectetur cumque ea est ex harum hic odio possimus praesentium provident qui saepe, veniam?
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, laboriosam, voluptas. <a href="#">Расскажите нам о вашей проблеме и идите нахуй</a> Accusamus adipisci aliquam, asperiores assumenda consectetur cumque ea est ex harum hic odio possimus praesentium provident qui saepe, veniam?</p>
+        </div>
+    </div>
+</section>
+<div class="block-3">
+    <div class="container">
+        <div class="cta">
+            <h2 class="headline">Требуется ремонт горнодобывающего оборудования?</h2>
+            <p>Чтобы точнее оценить вид и сложность ремонта оборудования, предлагаем Вам оставить заявку на бесплатную консультацию нашего специалиста. Опишите проблему, прикрепите фото(если есть), оставьте свои контактные данные и мы незамедлительно свяжемся с вами!</p>
+            <button data-fancybox data-src="#hidden-content-a" href="javascript:;" class="btn btn-cta">Рассчитать стоимость ремонта</button>
+        </div>
+    </div>
+</div>
+<section class="block-2">
+    <div class="container">
+        <h2 class="headline">Наши работы в других областях</h2>
+        <div class="areas">
+            <div class="areas-item">
+                <p>Горнодобывающая промышленность</p>
+                <img src="img/oil.png" alt="">
+                <button class="btn">Примеры</button>
+            </div>
+            <div class="areas-item">
+                <p>Нефтедобыча и нефтепереработка</p>
+                <img src="img/mount.png" alt="">
+                <button class="btn">Примеры</button>
+            </div>
+            <div class="areas-item">
+                <p>Энергетическая промышленность</p>
+                <img src="img/energy.png" alt="">
+                <button class="btn">Примеры</button>
+            </div>
+            <div class="areas-item">
+                <p>Автотранспорт и спецтехника</p>
+                <img src="img/car.png" alt="">
+                <button class="btn">Примеры</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include 'partials/contacts.twig' %}
+{% include 'partials/footer.twig' %}
+<script src="js/scripts.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

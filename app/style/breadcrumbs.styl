@@ -1,0 +1,42 @@
+.breadcrumbs
+    text-align: center
+    margin-bottom: 20px
+
+.breadcrumbs ul
+    display: inline-block;
+    list-style: none outside none;
+    padding: 0
+
+.breadcrumbs ul li
+    display: inline-block;
+
+.breadcrumbs ul li a
+    display: block;
+    float: left;
+    background: linear-gradient(to bottom,#f9c438 0%,#f5bf39 26%,#f3bd37 29%,#eeb738 50%,#ecb534 55%,#e1a932 100%);
+    text-align: center;
+    position: relative;
+    margin: 0
+    padding: 5px 10px
+    margin-right: 40px
+    font-size: 13px;
+    font-weight 600
+    text-decoration: none;
+    color: #000
+    &:hover
+        background: linear-gradient(to bottom,#ffd97a 0%,#fcd877 18%,#fed470 30%,#facb63 61%,#f8c75e 68%,#f5c153 100%);
+
+
+.breadcrumbs ul li a:after
+    content: ' ';
+    position: absolute;
+    right: -40px
+    top: 7px;
+    border: 10px solid transparent;
+    border-left: 15px solid #f9c438
+.breadcrumbs ul li:last-child a
+    margin-right: 0
+.breadcrumbs ul li:last-child a:after
+    display: none
+.breadcrumbs ul li:last-child a:hover
+    background: linear-gradient(to bottom,#f9c438 0%,#f5bf39 26%,#f3bd37 29%,#eeb738 50%,#ecb534 55%,#e1a932 100%);

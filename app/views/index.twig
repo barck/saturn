@@ -15,114 +15,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
 </head>
 <body id="scroll">
-        <div class="smart-wrap" style="display: none;" id="hidden-content-a">
-            <div class="smart-forms smart-container wrap-3">
-
-                <div class="form-header header-primary">
-                    <h4><i class="fa fa-comments"></i>Свяжитесь с нами</h4>
-                    <p>Хотите получить бесплатную консультацию специалиста по ремонту или сделать предварительный расчет стоимости работ? Воспользуйтесь этой универсальной формой обратной связи.</p>
-                </div><!-- end .form-header section -->
-
-                <form method="post" action="/" id="contact3">
-                    <div class="form-body">
-
-                        <div class="section">
-                            <label class="field prepend-icon">
-                                <input type="text" name="names" id="names" class="gui-input" placeholder="ФИО / Организация">
-                                <span class="field-icon"><i class="fa fa-user"></i></span>
-                            </label>
-                        </div><!-- end section -->
-
-                        <div class="section">
-                            <label class="field prepend-icon">
-                                <input type="email" name="email" id="email" class="gui-input" placeholder="Email">
-                                <span class="field-icon"><i class="fa fa-envelope"></i></span>
-                            </label>
-                        </div><!-- end section -->
-
-                        <div class="section">
-                            <label class="field prepend-icon">
-                                <input type="text" name="subject" id="tel" class="gui-input" placeholder="Телефон">
-                                <span class="field-icon"><i class="fa fa-lightbulb-o"></i></span>
-                            </label>
-                        </div><!-- end section -->
-                        <div class="section">
-                            <label class="field prepend-icon">
-                                <input type="text" name="time" id="tel" class="gui-input" placeholder="В какое время лучше позвонить?">
-                                <span class="field-icon"><i class="fa fa-lightbulb-o"></i></span>
-                            </label>
-                        </div><!-- end section -->
-
-                        <div class="section">
-                            <label class="field prepend-icon">
-                                <textarea class="gui-textarea" id="comment" name="comment" placeholder="Опишите проблему"></textarea>
-                                <span class="field-icon"><i class="fa fa-comments"></i></span>
-                                <span class="input-hint"> <strong>Ваш вопрос/</strong>описание проблемы</span>
-                            </label>
-                        </div><!-- end section -->
-
-                        <div class="section">
-                            <div class="smart-widget sm-left sml-80">
-                                <label class="field prepend-icon">
-                                    <input type="text" name="verify" id="verify" class="gui-input" placeholder="Введите ответ">
-                                    <span class="field-icon"><i class="fa fa-shield"></i></span>
-                                </label>
-                                <label for="verify" class="button">4 + 12</label>
-                            </div><!-- end .smart-widget section -->
-                        </div><!-- end section -->
-
-                        <div class="section">
-                            <label class="option">
-                                <input type="checkbox" name="check1">
-                                <span class="checkbox"></span>Согласие на обработку <a href="#">персональных данных</a>
-                            </label>
-                        </div><!-- end section -->
-
-                    </div><!-- end .form-body section -->
-                    <div class="form-footer">
-                        <button type="submit" class="button btn-primary">Отправить</button>
-                    </div><!-- end .form-footer section -->
-                </form>
-
-            </div><!-- end .smart-forms section -->
-        </div><!-- end .smart-wrap section -->
-
+{% include 'partials/smart-form.twig' %}
 <section class="start-block">
-    <header>
-        <div class="head-flex">
-            <p class="mobile-logo">Сатурн</p>
-            <a href="#"><div class="logo"><img src="img/logo.png" alt=""></div></a>
-            <nav>
-                <div id="menu-toggle">
-                    <div id="hamburger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div id="cross">
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-                <ul class="nav">
-                    <li>
-                        <a class="nav-items" href="#">Области применения</a>
-                        <ul>
-                            <li><a href="#">Горнодобывающая промышленность</a></li>
-                            <li><a href="#">Нефтедобывающая промышленность</a></li>
-                            <li><a href="#">Энергетическая промышленность</a></li>
-                            <li><a href="#">Автотранспорт и спецтехника</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="nav-items" href="#avantages">Преемущества</a></li>
-                    <li><a class="nav-items" href="#questions">Частые вопросы</a></li>
-                    <li><a class="nav-items" href="#contacts">Контакты</a></li>
-                    <li><a class="nav-items" href="#">Изготовление деталей</a></li>
-                    <li><a data-fancybox data-src="#hidden-content-a" href="javascript:;"  class="nav-items">+7 (982) 305-02-16 <br>Бесплатная консультация</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+{% include 'partials/header.twig' %}
     <div class="container">
         <h1>Ремонт промышленного оборудования с гарантией</h1>
         <h2>Уникальная технология, не имеющая аналогов на рынке</h2>
@@ -187,7 +82,7 @@
         </div>
         <div class="cta">
             <p>Чтобы точнее оценить вид и сложность ремонта оборудования, предлагаем Вам оставить заявку на бесплатную консультацию нашего специалиста. Опишите проблему, прикрепите фото(если есть), оставьте свои контактные данные и мы незамедлительно свяжемся с вами!</p>
-            <button class="btn btn-cta">Рассчитать стоимость ремонта</button>
+            <button data-fancybox data-src="#hidden-content-a" href="javascript:;" class="btn btn-cta">Рассчитать стоимость ремонта</button>
         </div>
     </div>
 </section>
@@ -254,7 +149,7 @@
                     <a href="#">форму обратной связи</a> или позвонив по телефону +7 (351) 233-61-58</p>
             </article>
         </div>
-        <button class="btn btn-cta">Рассчитать стоимость ремонта</button>
+        <button data-fancybox data-src="#hidden-content-a" href="javascript:;" class="btn btn-cta">Рассчитать стоимость ремонта</button>
     </div>
 </section>
 <section class="block-6">
@@ -287,44 +182,8 @@
             </div>
     </div>
 </section>
-<section class="block-7" id="contacts">
-    <div class="container">
-        <h2 class="headline">Контакты</h2>
-        <div class="contacts-flex">
-            <div class="left">
-                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A80a81694d6b41147112d69c6c7ed908b7803ee1731e45157701711df06f872ea&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
-            </div>
-            <div class="right">
-                <p class="home">Офис: г. Челябинск, ул. Кирова, д. 4, оф. 102</p>
-                <p class="geo">Производственная база: Челябинская обл., г. Коркино, пер. Блюхера, д.2</p>
-                <p class="mail">saturn74_chel@mail.ru</p>
-                <p class="phone">+7 (904) 978-60-94 <br> +7 (351) 233-61-58</p>
-                <p class="forward">Обратная связь</p>
-            </div>
-        </div>
-    </div>
-</section>
-<footer class="main-footer">
-    <div class="footer-left">
-        <p>ОГРН 324234234</p>
-        <p>ИНН 234234234</p>
-        <p>КПП 86767676</p>
-    </div>
-    <div class="footer-centre">
-        <a href="#">Технические характеристики полимера</a>
-        <a href="#questions">Часто задаваемые вопросы</a>
-        <a href="#avantages">Преимущества</a>
-        <a href="#">Защитные крема</a>
-        <a href="#">Изготовление деталей на заказ</a>
-    </div>
-    <div class="footer-right">
-        <p>Выполненные работы:</p>
-        <a href="#">Часто задаваемые вопросы</a>
-        <a href="#">Преимущества</a>
-        <a href="#">Защитные крема</a>
-        <a href="#">Изготовление деталей на заказ</a>
-    </div>
-</footer>
+{% include 'partials/contacts.twig' %}
+{% include 'partials/footer.twig' %}
 <script src="js/scripts.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

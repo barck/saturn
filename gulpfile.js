@@ -38,7 +38,7 @@ gulp.task('stylus', function () {
 
 gulp.task('compile', function () {
     'use strict';
-    return gulp.src('app/views/index.twig')
+    return gulp.src('app/views/*.twig')
         .pipe(twig())
         .pipe(gulp.dest('public'));
 });
@@ -65,7 +65,7 @@ gulp.task('copy', function () {
 
 gulp.task('watch', function() {
     gulp.watch('app/style/*.styl', ['stylus']); // Наблюдение за styl файлами и выполнение задачи stylus
-    gulp.watch('app/views/*.twig', ['compile']);
+    gulp.watch('app/views/**', ['compile']);
     gulp.watch('app/js/*.js', ['scripts']);  // Наблюдение за другими типами файлов
     gulp.watch('app/img/*', ['copy']);
 });

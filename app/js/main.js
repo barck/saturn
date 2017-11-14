@@ -8,6 +8,15 @@ if(window.screen.width >= 765) {
         slidesToShow: 4,
         slidesToScroll: 1
     });
+    $('.similar-slider').slick({
+        infinite: true,
+        dots: false,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        slidesToShow: 4,
+        slidesToScroll: 1
+    });
     $('.partners-slider').slick({
         infinite: true,
         dots: false,
@@ -19,6 +28,15 @@ if(window.screen.width >= 765) {
     });
 } else{
     $('.areas-slider').slick({
+        infinite: true,
+        dots: true,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    });
+    $('.similar-slider').slick({
         infinite: true,
         dots: true,
         arrows: false,
@@ -40,9 +58,9 @@ if(window.screen.width >= 765) {
 
 
 $(document).ready(function(){
-    $("#scroll").on("click","a", "button", function (event) {
+    $("#scroll").on("click"," a", function (event) {
         //отменяем стандартную обработку нажатия по ссылке
-        event.preventDefault();    //раскомментировать, если будет лагать скролл
+        // event.preventDefault();    //раскомментировать, если будет лагать скролл
 
         //забираем идентификатор бока с атрибута href
         var id  = $(this).attr('href'),
