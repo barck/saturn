@@ -3,7 +3,10 @@ var gulp = require('gulp'),
     stylus = require('gulp-stylus'),
     twig = require('gulp-twig'),
     clean = require('gulp-clean'),
-    browserSync = require('browser-sync');
+    browserSync = require('browser-sync'),
+    gutil = require('gulp-util'),
+    ftp = require('vinyl-ftp');
+
 
 
 gulp.task('default',  ['clean'], function() {
@@ -56,12 +59,10 @@ gulp.task('copy', function () {
     gulp.src('app/img/**')
         .pipe(gulp.dest('public/img'));
     gulp.src('app/style/fonts/**')
-        .pipe(gulp.dest('public/style/fonts'))
+        .pipe(gulp.dest('public/style/fonts'));
     gulp.src('app/*.php')
         .pipe(gulp.dest('public'))
 });
-
-
 
 gulp.task('watch', function() {
     gulp.watch('app/style/*.styl', ['stylus']); // Наблюдение за styl файлами и выполнение задачи stylus
@@ -78,3 +79,31 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
         notify: true // Отключаем уведомления
     });
 });
+
+
+
+/*** some ftp stuff ***/
+var ftp_data = {
+    from : [ "public/*/**", "public/**" ],
+    to : "/httpdocs"
+};
+
+function getConn() {
+    gutil.log("Ftp host - " + process.env.ftp_host);
+    gutil.log("Ftp user - " + process.env.ftp_user);
+    gutil.log("Ftp password - " + process.env.ftp_password);
+
+    return ftp.create({
+        host: process.env.ftp_host,
+        user: process.env.ftp_user,
+        pass: process.env.ftp_password
+    });
+}
+
+gulp.task('deploy', function () {
+    var conn = getConn();
+    return gulp.src(ftp_data.from, {base: './public', buffer: false})
+        .pipe(conn.dest(ftp_data.to))
+        .pipe(gutil.noop());
+});
+

@@ -3,7 +3,6 @@ app/.DS_Store
 app/img/.DS_Store
 .DS_Store
 .idea
-.idea/*
-.idea/workspace.xml
+init-env.bat
 *.xml
 *.xml

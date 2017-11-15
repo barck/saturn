@@ -11,6 +11,8 @@
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
     "gulp-remove-files": "0.0.3",
-    "gulp-stylus": "^2.6.0"
+    "gulp-stylus": "^2.6.0",
+    "gulp-util": "^3.0.8",
+    "vinyl-ftp": "^0.6.0"
   }
 }
