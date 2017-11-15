@@ -27,7 +27,7 @@ gulp.task('scripts', function() {
 gulp.task('stylus', function () {
     return gulp.src('app/style/*.styl')
         .pipe(stylus({
-            compress: true
+            compress: false
         }))
         .pipe(concat('main.css'))
         .pipe(gulp.dest('public/style/'))
