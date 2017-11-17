@@ -1028,7 +1028,7 @@ header {
 }
 .head-flex {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0 40px;
   position: relative;
 }
@@ -1037,7 +1037,7 @@ header {
     justify-content: center;
   }
 }
-@media (min-width: 1430px) {
+@media (min-width: 1450px) {
   .head-flex {
     padding: 0 160px;
   }
@@ -1161,7 +1161,7 @@ header {
 .logo:hover {
   background: #8b6500;
 }
-@media (max-width: 1190px) {
+@media (max-width: 1209px) {
   .logo {
     display: none;
   }
@@ -1211,11 +1211,15 @@ header {
   display: inline-block;
   border-bottom: 2px solid transparent;
   padding-bottom: 0;
+  position: relative;
 }
 @media (max-width: 992px) {
   .nav li {
     transform: none;
     border-left: 1px solid rgba(255,255,255,0.15);
+  }
+  .nav li:hover {
+    border: none;
   }
 }
 @media (max-width: 765px) {
