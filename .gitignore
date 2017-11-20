@@ -6,3 +6,4 @@ app/img/.DS_Store
 init-env.bat
 *.xml
 *.xml
+*.lock
