@@ -11,42 +11,38 @@
 
                 <div class="section">
                     <label class="field prepend-icon">
-                        <input type="text" name="name" id="name" class="gui-input" placeholder="ФИО">
-                        <span class="field-icon"><i class="fa fa-user"></i></span>
+                        <input type="text" name="name" id="name" class="gui-input" placeholder="ФИО" required>
                     </label>
+                    <span class="must">*обязательное поле</span>
                 </div><!-- end section -->
 
                 <div class="section">
                     <label class="field prepend-icon">
-                        <input type="text" name="tel" id="tel" class="gui-input" placeholder="Телефон">
-                        <span class="field-icon"><i class="fa fa-user"></i></span>
+                        <input type="text" name="tel" id="tel" class="gui-input" placeholder="Телефон" required>
                     </label>
+                    <span class="must">*обязательное поле</span>
                 </div><!-- end section -->
 
                 <div class="section">
                     <label class="field prepend-icon">
                         <input type="email" name="company" id="company" class="gui-input" placeholder="Организация">
-                        <span class="field-icon"><i class="fa fa-envelope"></i></span>
                     </label>
                 </div><!-- end section -->
 
                 <div class="section">
                     <label class="field prepend-icon">
                         <input type="text" name="email" id="email" class="gui-input" placeholder="Email">
-                        <span class="field-icon"><i class="fa fa-lightbulb-o"></i></span>
                     </label>
                 </div><!-- end section -->
                 <div class="section">
                     <label class="field prepend-icon">
                         <input type="text" name="time" id="tel" class="gui-input" placeholder="В какое время лучше позвонить?">
-                        <span class="field-icon"><i class="fa fa-lightbulb-o"></i></span>
                     </label>
                 </div><!-- end section -->
 
                 <div class="section">
                     <label class="field prepend-icon">
                         <textarea class="gui-textarea" id="comment" name="comment" placeholder="Опишите проблему"></textarea>
-                        <span class="field-icon"><i class="fa fa-comments"></i></span>
                         <span class="input-hint"> <strong>Ваш вопрос/</strong>описание проблемы</span>
                     </label>
                 </div><!-- end section -->
@@ -54,7 +50,6 @@
                 <div class="section">
                     <label class="field prepend-icon">
                         <input type="file" name="file" id="file" >
-                        <span class="field-icon"><i class="fa fa-lightbulb-o"></i></span>
                     </label>
                 </div><!-- end section -->
 
@@ -62,7 +57,6 @@
                     <div class="smart-widget sm-left sml-80">
                         <label class="field prepend-icon">
                             <input type="text" name="verify" id="verify" class="gui-input" placeholder="Введите ответ">
-                            <span class="field-icon"><i class="fa fa-shield"></i></span>
                         </label>
                         <label for="verify" class="button">4 + 12</label>
                     </div><!-- end .smart-widget section -->
@@ -70,8 +64,9 @@
 
                 <div class="section">
                     <label class="option">
-                        <input type="checkbox" name="check1">
+                        <input type="checkbox" name="check1" required>
                         <span class="checkbox"></span>Согласие на обработку <a href="#">персональных данных</a>
+                        <span class="must">*обязательное поле</span>
                     </label>
                 </div><!-- end section -->
 
