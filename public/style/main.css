@@ -1710,12 +1710,6 @@ header {
 * {
   box-sizing: border-box;
 }
-span {
-  display: block;
-  background: #fff;
-  border-radius: 2px;
-  transition: 0.25s ease-in-out;
-}
 #menu-toggle {
   width: 50px;
   height: 50px;
