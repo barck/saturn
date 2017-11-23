@@ -1,64 +1,3 @@
-.ac-container label
-    padding: 5px 20px
-    position: relative
-    z-index: 20
-    display: block
-    cursor: pointer
-    color: #000
-    line-height: 33px
-    font-size: 19px
-    background: #f9c438
-    border-radius 5px
-    margin-bottom: 3px
-    @media (max-width 765px)
-        font-size 17px
-        line-height: 24px
-
-.ac-container label:hover
-    background: #eba10f
-
-.ac-container input:checked + label,
-.ac-container input:checked + label:hover
-    background: #eba10f
-    font-weight 400
-
-.ac-container label:hover:after,
-.ac-container input:checked + label:hover:after
-    content: ''
-    position: absolute
-    width: 24px
-    height: 24px
-    right: 13px
-    top: 7px
-
-.ac-container input
-    display: none
-
-.ac-container article
-    background: rgba(255, 255, 255, 0.1)
-    margin-top: -1px
-    overflow: hidden
-    height: 0
-    position: relative
-    z-index: 10
-    transition: height 0.3s ease-in-out
-
-.ac-container input:checked ~ article
-    transition: height 0.3s ease-in-out
-    height: 250px
-    @media (max-width 769px)
-        height: 400px
-
-.ac-container article p
-    color: #fff
-    line-height: 24px
-    font-size: 18px
-    padding: 20px
-    padding-top: 0
-    padding-bottom: 0
-    @media (max-width 765px)
-        font-size 14px
-        line-height: 22px
 
 ul
     margin-top: 10px
@@ -75,3 +14,37 @@ a
 .ac-container
     button
         margin-top: 40px
+
+.horizontal-click [name="vkl"] { display: none; }
+.horizontal-click > :not(input):not(label) {
+    overflow: hidden;
+    height: 0;
+    margin: 0;
+    padding: 0 .5em;
+    border-top-style: none;
+    transition: .5s;
+    background: rgba(255, 255, 255, 0.1)
+}
+.horizontal-click > label {
+    padding: 5px 20px;
+    position: relative;
+    z-index: 20;
+    display: block;
+    cursor: pointer;
+    color: #000;
+    line-height: 33px;
+    font-size: 19px;
+    background: #f9c438;
+    border-radius: 5px;
+    margin-bottom: 3px;
+}
+.horizontal-click > :checked + label + * {
+    overflow: auto;
+    height: 310px;
+    padding: 10px
+}
+.horizontal-click > :checked + label {
+    background: #ffa000
+    cursor: default;
+    font-weight 500
+}
