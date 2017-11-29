@@ -2217,7 +2217,6 @@ body {
   overflow: hidden;
   padding: 5px 25px;
   padding-top: 10px;
-  background: #f3f5fa url("/images/foobg.png") top left repeat-x;
 }
 /* @crossbrowser placeholder styling :: modern browsers only IE10+
 ------------------------------------------------------------------------ */
