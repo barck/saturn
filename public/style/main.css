@@ -958,7 +958,7 @@ body {
   overflow-x: hidden;
 }
 img {
-  width: 100%;
+  max-width: 100%;
 }
 .container {
   width: 960px;
@@ -1611,7 +1611,7 @@ header {
   margin-bottom: 10px;
 }
 .user-block .user-content img {
-  width: auto;
+  width: 100%;
   margin: 10px;
 }
 .user-block .user-content a {
@@ -1670,6 +1670,10 @@ header {
   margin-top: 5px;
   min-height: 0;
   font-size: 16px;
+}
+span img {
+  width: 100%;
+  margin-left: -10px;
 }
 
 * {
