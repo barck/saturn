@@ -1565,25 +1565,21 @@ header {
 }
 .main-footer .footer-left {
   width: 30%;
-  border-right: 1px solid #fff;
 }
 @media (max-width: 765px) {
   .main-footer .footer-left {
     width: 100%;
     border-right: none;
-    border-bottom: 1px solid #fff;
     padding-bottom: 20px;
   }
 }
 .main-footer .footer-centre {
   width: 30%;
-  border-right: 1px solid #fff;
 }
 @media (max-width: 765px) {
   .main-footer .footer-centre {
     width: 100%;
     border-right: none;
-    border-bottom: 1px solid #fff;
     padding-bottom: 20px;
     padding-top: 20px;
   }
