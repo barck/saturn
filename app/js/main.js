@@ -66,7 +66,7 @@ $(document).ready(function(){
         var id  = $(this).attr('href');
 
         // если ебучая пустая ссылка - выходим (для формы захвата)
-        if(id === '#') {
+        if(id === '#' || id !== undefined && id.length > 0 && id[0] !== '#' ) {
             return;
         }
 
