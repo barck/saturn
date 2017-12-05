@@ -59,24 +59,26 @@ if(window.screen.width >= 765) {
 
 $(document).ready(function(){
     $("#scroll").on("click"," a", function (event) {
-        //отменяем стандартную обработку нажатия по ссылке
-        // event.preventDefault();    //раскомментировать, если будет лагать скролл
-
+        event.preventDefault();
         //забираем идентификатор бока с атрибута href
         var id  = $(this).attr('href');
 
-        // если ебучая пустая ссылка - выходим (для формы захвата)
-        if(id === '#' || id !== undefined && id.length > 0 && id[0] !== '#' ) {
+        // если пустая ссылка - выходим (для формы захвата)
+        if(id === '#' || id !== undefined && id.length > 0 && id[0] !== '#') {
+            window.location.href = id;
             return;
         }
 
         $id = $(id);
 
         // если не на главной - перемещаемся туда
-        if($id === undefined || $id.length === 0) {
-            window.location.href = "/#" + id;
-            return;
+        if(($id === undefined || $id.length === 0)) {
+            if(id !== "#cta") {
+                window.location.href = "/#" + id;
+                return;
+            }
         }
+
 
         //узнаем высоту от начала страницы до блока на который ссылается якорь
         var top = $(id).offset().top - 90;
