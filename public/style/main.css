@@ -1612,21 +1612,23 @@ header {
 }
 .user-block .user-content {
   text-align: left;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 24px;
-  font-weight: 100;
   text-indent: 10px;
+  color: #000 !important;
+  font-weight: 400;
 }
 .user-block .user-content p {
   margin-bottom: 10px;
   color: #000;
-  font-weight: 300;
+  font-weight: 400;
 }
 .user-block .user-content img {
   max-width: 100%;
 }
 .user-block .user-content a {
-  font-weight: 300;
+  font-weight: 600px;
+  text-decoration: underline;
   font-size: 18px;
   line-height: 40px;
   color: #f9c438;
