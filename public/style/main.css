@@ -1627,7 +1627,7 @@ header {
   max-width: 100%;
 }
 .user-block .user-content a {
-  font-weight: 600px;
+  font-weight: 700 !important;
   text-decoration: underline;
   font-size: 18px;
   line-height: 40px;
