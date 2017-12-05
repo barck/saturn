@@ -1308,6 +1308,7 @@ header {
     line-height: 36px;
   }
 }
+.start-block p,
 .start-block h3 {
   font-size: 25px;
   line-height: 42px;
@@ -1315,6 +1316,7 @@ header {
   margin-bottom: 150px;
 }
 @media (max-width: 765px) {
+  .start-block p,
   .start-block h3 {
     margin-bottom: 70px;
     font-size: 24px;
