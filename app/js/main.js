@@ -58,14 +58,13 @@ if(window.screen.width >= 765) {
 
 
 $(document).ready(function(){
-    $("#scroll").on("click"," a", function (event) {
+    $(".nav-items").on("click", function (event) {
         event.preventDefault();
         //забираем идентификатор бока с атрибута href
         var id  = $(this).attr('href');
 
         // если пустая ссылка - выходим (для формы захвата)
         if(id === '#' || id !== undefined && id.length > 0 && id[0] !== '#') {
-            window.location.href = id;
             return;
         }
 
@@ -74,7 +73,7 @@ $(document).ready(function(){
         // если не на главной - перемещаемся туда
         if(($id === undefined || $id.length === 0)) {
             if(id !== "#cta") {
-                window.location.href = "/#" + id;
+                window.location.href = "/" + id;
                 return;
             }
         }
