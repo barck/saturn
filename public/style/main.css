@@ -1095,7 +1095,7 @@ header {
   align-items: center;
 }
 .user-block {
-  background: #fff url("../img/1_light.jpg") repeat fixed;
+  background: #fff;
   background-size: cover;
   padding-bottom: 1px;
   padding-top: 20px;
