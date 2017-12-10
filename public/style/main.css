@@ -1595,6 +1595,14 @@ header {
     padding-top: 10px;
   }
 }
+.main-footer .footer-right .developer {
+  padding-top: 15px;
+  font-size: 14px;
+}
+.main-footer .footer-right .developer img {
+  border-radius: 5px;
+  max-width: 130px;
+}
 .fancybox-slide>div {
   background-color: transparent !important;
 }
